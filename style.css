@@ -505,6 +505,7 @@ body {
 
                     & > .end {
                         position: relative;
+                        margin-bottom: 25px;
 
                         & > button {
                             width: 400px;
