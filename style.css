@@ -517,6 +517,7 @@ body {
                             background-color: #171717;
                             border: 1px solid #333333;
                             border-radius: 30px;
+                            cursor: pointer;
                         }
 
                         & > button:hover {
