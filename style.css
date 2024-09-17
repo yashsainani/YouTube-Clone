@@ -9,6 +9,11 @@ body {
     background-color: #0f0f0f;
 }
 
+html {
+    scrollbar-width: thin;
+    scrollbar-color: grey #0f0f0f;
+}
+
 .container {
     max-width: 1920px;
     margin: 0 auto;
@@ -206,14 +211,14 @@ body {
         padding-top: 10px;
 
         & > .sidebar {
-            width: 15%;
+            width: 30%;
+            height: calc(100vh - 72px);
+            overflow-y: scroll;
 
             & > aside {
                 display: flex;
                 flex-direction: column;
-                gap: 25px;
-                overflow-y: scroll;
-                
+                gap: 25px;  
 
                 & > .video-nav {
                     display: flex;
@@ -328,7 +333,9 @@ body {
             display: flex;
             flex-direction: column;
             gap: 25px;
+            height: calc(100vh - 72px);
             padding-left: 10px;
+            overflow-y: scroll;
 
             & > .navbar {
                 display: flex;
