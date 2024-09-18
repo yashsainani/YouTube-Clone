@@ -11,7 +11,7 @@ body {
 
 html {
     scrollbar-width: thin;
-    scrollbar-color: grey #0f0f0f;
+    scrollbar-color: grey transparent;
 }
 
 .container {
@@ -211,9 +211,9 @@ html {
         padding-top: 10px;
 
         & > .sidebar {
-            width: 30%;
+            width: 16.5vw;
             height: calc(100vh - 72px);
-            overflow-y: scroll;
+            overflow-y: hidden;
 
             & > aside {
                 display: flex;
@@ -329,26 +329,34 @@ html {
             }
         }
 
+        .sidebar:hover {
+            overflow-y: scroll;
+            scrollbar-width: thin;
+        }
+
         & > .navbar-with-content {
             display: flex;
             flex-direction: column;
             gap: 25px;
-            height: calc(100vh - 72px);
+            width: 84.5vw;
             padding-left: 10px;
-            overflow-y: scroll;
 
             & > .navbar {
                 display: flex;
-                flex-wrap: wrap;
+                width: 100%;
+                overflow-x: scroll;
                 gap: 15px;
                 padding: 0px 0px 10px 15px;
+                scrollbar-width: none;
 
                 & > p {
                     background-color: #333333;
                     width: fit-content;
+                    height: fit-content;
                     padding: 6px 10px;
                     border-radius: 10px;
                     cursor: pointer;
+                    white-space: nowrap;
                 }
 
                 & > p:hover {
@@ -370,6 +378,9 @@ html {
                 flex-direction: column;
                 gap: 20px;
                 padding: 0px 25px 0px 15px;
+                height: calc(100vh - 155px);
+                overflow-y: scroll;
+                scrollbar-width: thin;
 
                 & > .yt-video {
                     display: flex;
@@ -461,6 +472,7 @@ html {
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
+                    width: 100%;
 
                     & > .head {
                         display: flex;
